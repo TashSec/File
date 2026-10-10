@@ -1,3 +1,14 @@
+wget -O /tmp/onedrive-release.key "https://download.opensuse.org/repositories/home:/npreining:/debian-ubuntu-onedrive/Debian_13/Release.key"
+
+
+gpg --show-keys /tmp/onedrive-release.key
+
+
+
+sudo gpg --dearmor --yes --output /usr/share/keyrings/obs-onedrive.gpg /tmp/onedrive-release.key
+
+
+
 wget -qO - https://download.opensuse.org/repositories/home:/npreining:/debian-ubuntu-onedrive/Debian_13/Release.key | gpg --dearmor | sudo tee /usr/share/keyrings/obs-onedrive.gpg > /dev/null
 
 
